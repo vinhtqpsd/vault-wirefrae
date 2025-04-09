@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Breadcrumb, Card, Col, Container, ListGroup, Row } from "react-bootstrap";
+import ChatWidget from "./chat/ChatWidget";
 
 export default function ManageVault() {
     return (
@@ -82,6 +83,8 @@ export default function ManageVault() {
                     </Card.Body>
                 </Card>
             </Container>
+
+            <ChatWidget />
         </>
     );
 }

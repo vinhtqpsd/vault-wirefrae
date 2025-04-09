@@ -1,6 +1,8 @@
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Breadcrumb, Button, Card, Col, Container, Form, InputGroup, Row, Modal } from "react-bootstrap";
+import ChatWidget from "./chat/ChatWidget";
 
 export default function VaultDetails() {
     const [myVault, setMyVault] = useState(true);
@@ -122,6 +124,8 @@ export default function VaultDetails() {
                     </div>
                 </Modal.Body>
             </Modal>
+
+            <ChatWidget />
         </>
     );
 }

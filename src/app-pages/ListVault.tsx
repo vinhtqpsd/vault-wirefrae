@@ -1,16 +1,22 @@
 import Link from "next/link";
-import { Container, Table } from "react-bootstrap";
+import { Container, Form, Table } from "react-bootstrap";
 
 export default function ListVault() {
     return (
-        <Container className="py-5">
-            <h1 className="pb-4">ListVault</h1>
-            <Table bordered>
+        <>
+            <div className="d-flex justify-content-between align-items-center pb-4">
+                <h1 className="mb-0">ListVault</h1>
+                <div>
+                    <Form.Control type="search" placeholder="search by name..." />
+                </div>
+            </div>
+            <Table bordered responsive>
                 <thead>
                     <tr>
                         <th>vault</th>
+                        <th>Network</th>
+                        <th>Protocol</th>
                         <th>TVL</th>
-                        <th>Age</th>
                         <th>Vault's PnL</th>
                         <th>Your PnL</th>
                         <th>Your Deposit</th>
@@ -27,8 +33,9 @@ export default function ListVault() {
                                     Created by <span className="fw-medium">0x0000...0000</span>
                                 </div>
                             </td>
+                            <td>BSC</td>
+                            <td>HyperLiquid</td>
                             <td>1.22M USDC</td>
-                            <td>213 days</td>
                             {i == 4 ? (
                                 <>
                                     <td>
@@ -52,6 +59,6 @@ export default function ListVault() {
                     ))}
                 </tbody>
             </Table>
-        </Container>
+        </>
     );
 }
