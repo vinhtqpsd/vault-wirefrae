@@ -4,13 +4,13 @@ import { Breadcrumb, Container } from "react-bootstrap";
 export default function ChatPage() {
     return (
         <BaseLayout>
-            <Container className="py-5">
+            <Container className="pt-5">
                 <Breadcrumb>
                     <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
                     <Breadcrumb.Item active>DeFi Assistant</Breadcrumb.Item>
                 </Breadcrumb>
-                <section className="pb-5">
-                    <h1>DeFi Assistant</h1>
+                <section>
+                    <h1 className="mb-4">DeFi Assistant</h1>
                     <ChatBox />
                 </section>
             </Container>
